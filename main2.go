@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 type Node struct {
-	data  string
-	left  *Node
+	data string
+	left *Node
 	right *Node
 }
 func (root *Node) PrintPreorder() {
@@ -16,8 +16,6 @@ func (root *Node) PrintPreorder() {
 		root.right.PrintPreorder()
 	}
 }
-
-
 func (root *Node) PrintPostorder() {
 	if root.left != nil {
 		root.left.PrintPostorder()
@@ -28,7 +26,7 @@ func (root *Node) PrintPostorder() {
 	fmt.Println(root.data)
 }
 func main() {
-	nodeE := Node{data: "c", left: nil, right: nil}
+	nodeE := Node{data: "c",left:nil, right:  nil }
 	nodeD := Node{data: "b", left: nil, right: nil}
 	nodeC := Node{data: "-", left: &nodeD, right: &nodeE}
 	nodeB := Node{data: "a", left: nil, right: nil}
